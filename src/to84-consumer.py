@@ -1,7 +1,7 @@
 import os
 import sys
 from kafka import KafkaConsumer
-from lib.to84_kafka_consumer import TO84KafkaConsumer
+from kafka_consumer.to84_kafka_consumer import TO84KafkaConsumer
 
 print "Entered main..."
 sys.stdout.flush()
