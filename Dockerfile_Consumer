@@ -5,6 +5,7 @@ WORKDIR /src
 #ADD ./bin/* /bin/
 ADD ./src/*.py /src/
 ADD ./src/kafka_consumer/*.py /src/kafka_consumer/
+ADD ./src/utilities/*.py /src/utilities/
 
 RUN pip install kafka-python
 
