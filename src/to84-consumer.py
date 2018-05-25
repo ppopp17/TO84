@@ -3,6 +3,8 @@ import sys
 from kafka import KafkaConsumer
 from kafka_consumer.to84_kafka_consumer import TO84KafkaConsumer
 from utilities.environment import TO84Environment
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 #print "Entered main..."
 #sys.stdout.flush()
@@ -10,10 +12,9 @@ from utilities.environment import TO84Environment
 #topicName = os.environ['TOPIC_NAME']
 #bootstrapServers = os.environ['CONSUMER_BOOTSTRAP']
 
-#print "Topic ="+topicName+", broker="+bootstrapServers
-#sys.stdout.flush()
-
 env = TO84Environment()
+print "Topic ="+env.topicName+", broker="+env.bootstrapServers
+sys.stdout.flush()
 
 TO84_Consumer = TO84KafkaConsumer(env.topicName,env.bootstrapServers)
 #print "KafkaConsumer created"

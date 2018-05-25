@@ -6,6 +6,10 @@ set -e
 #         Must be one of the following values:
 #         ALTAMIRA_U: altamira uncalssified environment
 
+ping -c 4 10.0.2.15
+ping -c 4 192.168.122.1
+ping -c 4 172.17.0.1
+
 BINPATH=`dirname $0`
 AL="ALTAMIRA_L"
 AU="ALTAMIRA_U"
@@ -33,4 +37,4 @@ fi
 # start up python consumer
 #ping 10.0.2.15
 #python --version
-python "$BINPATH/../pythonConsumer/main.py" $@
+#python "$BINPATH/../pythonConsumer/main.py" $@

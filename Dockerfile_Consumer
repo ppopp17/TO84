@@ -11,6 +11,7 @@ RUN pip install kafka-python
 
 ENV TOPIC_NAME=test
 ENV CONSUMER_BOOTSTRAP=10.0.2.15:9092
+#ENV CONSUMER_BOOTSTRAP=192.168.122.1:9092
 
-# CMD [ "bash", "src.sh"]
+#CMD [ "bash", "pythonConsumer.sh"]
 CMD [ "python", "to84-consumer.py"]

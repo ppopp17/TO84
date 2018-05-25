@@ -1,0 +1,7 @@
+FROM python:2
+
+WORKDIR /bin
+
+ADD ./bin/* /bin/
+
+CMD [ "bash", "pythonConsumer.sh"]
